@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@100;200;300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+
+.char-card {
+    position: relative;
+    border-radius: 35px;
+    background: hsla(0, 0%, 100%, .01);
+    box-shadow: inset -1.511px 0 17.571px 0 hsla(0, 0%, 100%, .2), inset 0 1.511px 27.202px 0 hsla(0, 0%, 100%, .05);
+    padding: 40px 40px;
+    margin-top: 24px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.char-card::before,
+.char-card::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+}
+
+.char-card::after {
+    width: 130px;
+    height: 130px;
+    background-image: radial-gradient(circle, #580aaf, #6a11cb);
+    top: 10%;
+    right: 10%;
+    filter: blur(55px);
+    z-index: -3;
+}
+
+.char-card::before {
+    width: 120px;
+    height: 120px;
+    background-image: radial-gradient(circle, #2164d9, #2674fc);
+    top: -10%;
+    right: 0;
+    filter: blur(62px);
+    z-index: -3;
+}
